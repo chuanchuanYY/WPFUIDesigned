@@ -1,0 +1,886 @@
+﻿<Window
+    x:Class="WpfApp1.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:WpfApp1"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="MainWindow"
+    Width="1280"
+    Height="720"
+    AllowsTransparency="True"
+    Background="Transparent"
+    WindowStartupLocation="CenterScreen"
+    WindowStyle="None"
+    mc:Ignorable="d">
+    <Grid Background="White">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80" />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <!--  heard  -->
+        <DockPanel
+            Name="head"
+            Background="White"
+            LastChildFill="False">
+            <Image Source="./Images/icon.png" />
+            <!--  搜索栏  -->
+            <TextBox
+                Width="300"
+                Height="40"
+                Margin="50,0,0,0"
+                Style="{StaticResource SearchTextBox}" />
+            <StackPanel
+                Margin="0,0,40,0"
+                DockPanel.Dock="Right"
+                Orientation="Horizontal">
+                <Image
+                    Width="40"
+                    Height="40"
+                    Source="./Images/2.jpg">
+                    <Image.Clip>
+                        <EllipseGeometry
+                            Center="20 20"
+                            RadiusX="20"
+                            RadiusY="20" />
+                    </Image.Clip>
+                </Image>
+                <TextBlock
+                    Margin="10,0,10,0"
+                    VerticalAlignment="Center"
+                    FontSize="15"
+                    Foreground="{StaticResource FontColor2}"
+                    Text="Anthony Delmas" />
+                <TextBlock
+                    VerticalAlignment="Center"
+                    FontSize="20"
+                    Foreground="{StaticResource FontColor2}"
+                    Style="{StaticResource IconTextBlock}"
+                    Text="&#xe68d;" />
+            </StackPanel>
+        </DockPanel>
+
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="85" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+
+            <!--  左边导航栏 Left Nav Menu  -->
+            <DockPanel Background="{StaticResource Color1}" LastChildFill="False">
+                <StackPanel
+                    Width="85"
+                    Margin="0,50,0,0"
+                    DockPanel.Dock="Top">
+                    <RadioButton
+                        HorizontalAlignment="Center"
+                        Content="&#xe61e;"
+                        FontSize="25"
+                        Style="{StaticResource IconButton}" />
+                    <RadioButton
+                        Margin="0,25,0,0"
+                        HorizontalAlignment="Center"
+                        Content="&#xe83f;"
+                        FontSize="25"
+                        Style="{StaticResource IconButton}" />
+                    <RadioButton
+                        Margin="0,25,0,0"
+                        HorizontalAlignment="Center"
+                        Content="&#xe668;"
+                        FontSize="25"
+                        Style="{StaticResource IconButton}" />
+                    <RadioButton
+                        Margin="0,25,0,0"
+                        HorizontalAlignment="Center"
+                        Content="&#xe6cf;"
+                        FontSize="25"
+                        Style="{StaticResource IconButton}" />
+                </StackPanel>
+                <StackPanel
+                    Width="85"
+                    Margin="0,0,0,50"
+                    DockPanel.Dock="Bottom">
+                    <RadioButton
+                        HorizontalAlignment="Center"
+                        Content="&#xeb27;"
+                        FontSize="25"
+                        Style="{StaticResource IconButton}" />
+                    <RadioButton
+                        Margin="0,30,0,0"
+                        HorizontalAlignment="Center"
+                        Content="&#xe6f0;"
+                        FontSize="25"
+                        Style="{StaticResource IconButton}" />
+                </StackPanel>
+            </DockPanel>
+
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto" />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+                <Border Height="200">
+                    <Border.Background>
+                        <ImageBrush ImageSource="./Images/1.jpg" />
+                    </Border.Background>
+                    <DockPanel LastChildFill="False">
+                        <StackPanel
+                            Margin="40,0,0,25"
+                            VerticalAlignment="Bottom"
+                            Orientation="Horizontal">
+                            <TextBlock
+                                FontSize="30"
+                                Foreground="{StaticResource FontColor2}"
+                                Style="{StaticResource IconTextBlock}"
+                                Text="&#xe641;" />
+                            <TextBlock
+                                VerticalAlignment="Center"
+                                FontWeight="Bold"
+                                Foreground="{StaticResource FontColor2}"
+                                Text="ST.PETERSBURG" />
+                        </StackPanel>
+                        <StackPanel DockPanel.Dock="Right" Orientation="Horizontal">
+                            <Grid Width="120">
+                                <Border Background="{StaticResource Color3}" Opacity="0.5" />
+                                <StackPanel VerticalAlignment="Center">
+                                    <TextBlock
+                                        HorizontalAlignment="Center"
+                                        FontSize="40"
+                                        Foreground="White"
+                                        Style="{StaticResource IconTextBlock}"
+                                        Text="&#xe680;" />
+                                    <TextBlock
+                                        HorizontalAlignment="Center"
+                                        Foreground="White"
+                                        Text="Best time to visit" />
+                                    <TextBlock
+                                        HorizontalAlignment="Center"
+                                        FontWeight="DemiBold"
+                                        Foreground="White"
+                                        Text="MARCH" />
+                                </StackPanel>
+                            </Grid>
+                            <Grid Width="120">
+                                <Border Background="{StaticResource Color2}" Opacity="0.5" />
+                                <StackPanel VerticalAlignment="Center">
+                                    <TextBlock
+                                        HorizontalAlignment="Center"
+                                        FontSize="40"
+                                        Foreground="White"
+                                        Style="{StaticResource IconTextBlock}"
+                                        Text="&#xe822;" />
+                                    <TextBlock
+                                        HorizontalAlignment="Center"
+                                        Foreground="White"
+                                        Text="20 flights from" />
+                                    <TextBlock
+                                        HorizontalAlignment="Center"
+                                        FontWeight="DemiBold"
+                                        Foreground="White"
+                                        Text="350$" />
+
+                                </StackPanel>
+                            </Grid>
+                        </StackPanel>
+                    </DockPanel>
+                </Border>
+
+                <!--  内容 Content  -->
+                <Grid Grid.Row="1" Background="{StaticResource Color4}">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition />
+                        <ColumnDefinition Width="240" />
+                    </Grid.ColumnDefinitions>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto" />
+                            <RowDefinition Name="ROW1" />
+                        </Grid.RowDefinitions>
+                        <DockPanel Margin="30,30,30,0" LastChildFill="False">
+                            <RadioButton
+                                Content="Newest"
+                                FontSize="15"
+                                IsChecked="True"
+                                Style="{StaticResource IconButton}" />
+                            <RadioButton
+                                Margin="20,0,0,0"
+                                Content="Popular"
+                                FontSize="15"
+                                Style="{StaticResource IconButton}" />
+                            <StackPanel DockPanel.Dock="Right" Orientation="Horizontal">
+                                <RadioButton
+                                    Content="&#xe615;"
+                                    FontSize="25"
+                                    IsChecked="True"
+                                    Style="{StaticResource IconButton}" />
+                                <RadioButton
+                                    Margin="30,0,0,0"
+                                    Content="&#xe642;"
+                                    FontSize="25"
+                                    Style="{StaticResource IconButton}" />
+                            </StackPanel>
+                        </DockPanel>
+
+                        <ListBox
+                            Grid.Row="1"
+                            Padding="15,0,15,0"
+                            Background="{StaticResource Color4}"
+                            BorderThickness="0"
+                            ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                            ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                            <ListBox.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <UniformGrid />
+                                </ItemsPanelTemplate>
+                            </ListBox.ItemsPanel>
+                            <ListBoxItem>
+                                <Border
+                                    Width="265"
+                                    Height="180"
+                                    Margin="15,15,15,15"
+                                    Background="White">
+                                    <Border.BitmapEffect>
+                                        <DropShadowBitmapEffect
+                                            Direction="270"
+                                            Opacity="0.5"
+                                            ShadowDepth="1"
+                                            Softness="0.1" />
+                                    </Border.BitmapEffect>
+                                    <StackPanel>
+                                        <Grid>
+                                            <Image
+                                                Height="140"
+                                                Source="./Images/MainImage1.jpg"
+                                                Stretch="UniformToFill" />
+                                            <Border
+                                                Width="42"
+                                                Height="42"
+                                                Margin="5"
+                                                HorizontalAlignment="Right"
+                                                VerticalAlignment="Top"
+                                                Background="White"
+                                                CornerRadius="21">
+                                                <Image
+                                                    Width="40"
+                                                    Height="40"
+                                                    Source="./Images/2.jpg">
+                                                    <Image.Clip>
+                                                        <EllipseGeometry
+                                                            Center="20 20 "
+                                                            RadiusX="20"
+                                                            RadiusY="20" />
+                                                    </Image.Clip>
+                                                </Image>
+                                            </Border>
+                                        </Grid>
+                                        <DockPanel LastChildFill="False">
+                                            <StackPanel Margin="6">
+                                                <TextBlock
+                                                    FontWeight="DemiBold"
+                                                    Foreground="{StaticResource FontColor1}"
+                                                    Text="Cory Peterson" />
+                                                <TextBlock
+                                                    Margin="0,2,0,0"
+                                                    FontSize="8"
+                                                    Foreground="{StaticResource FontColor2}"
+                                                    Text="Texas,USA" />
+                                            </StackPanel>
+                                            <StackPanel
+                                                Margin="0,0,10,0"
+                                                DockPanel.Dock="Right"
+                                                Orientation="Horizontal">
+
+                                                <TextBlock
+                                                    VerticalAlignment="Center"
+                                                    FontSize="15"
+                                                    FontWeight="DemiBold"
+                                                    Foreground="{StaticResource Color2}"
+                                                    Style="{StaticResource IconTextBlock}"
+                                                    Text="&#xe83f;" />
+                                                <TextBlock
+                                                    Margin="1,0,0,0"
+                                                    VerticalAlignment="Center"
+                                                    FontWeight="DemiBold"
+                                                    Foreground="{StaticResource Color2}"
+                                                    Text="255" />
+                                            </StackPanel>
+                                        </DockPanel>
+                                    </StackPanel>
+                                </Border>
+                            </ListBoxItem>
+                            <ListBoxItem>
+                                <Border
+                                    Width="265"
+                                    Height="180"
+                                    Margin="15,15,15,15"
+                                    Background="White">
+                                    <Border.BitmapEffect>
+                                        <DropShadowBitmapEffect
+                                            Direction="270"
+                                            Opacity="0.5"
+                                            ShadowDepth="1"
+                                            Softness="0.1" />
+                                    </Border.BitmapEffect>
+                                    <StackPanel>
+                                        <Grid>
+                                            <Image
+                                                Height="140"
+                                                Source="./Images/MainImage2.jpg"
+                                                Stretch="UniformToFill" />
+                                            <Border
+                                                Width="42"
+                                                Height="42"
+                                                Margin="5"
+                                                HorizontalAlignment="Right"
+                                                VerticalAlignment="Top"
+                                                Background="White"
+                                                CornerRadius="21">
+                                                <Image
+                                                    Width="40"
+                                                    Height="40"
+                                                    Source="./Images/2.jpg">
+                                                    <Image.Clip>
+                                                        <EllipseGeometry
+                                                            Center="20 20 "
+                                                            RadiusX="20"
+                                                            RadiusY="20" />
+                                                    </Image.Clip>
+                                                </Image>
+                                            </Border>
+                                        </Grid>
+                                        <DockPanel LastChildFill="False">
+                                            <StackPanel Margin="6">
+                                                <TextBlock
+                                                    FontWeight="DemiBold"
+                                                    Foreground="{StaticResource FontColor1}"
+                                                    Text="Cory Peterson" />
+                                                <TextBlock
+                                                    Margin="0,2,0,0"
+                                                    FontSize="8"
+                                                    Foreground="{StaticResource FontColor2}"
+                                                    Text="Texas,USA" />
+                                            </StackPanel>
+                                            <StackPanel
+                                                Margin="0,0,10,0"
+                                                DockPanel.Dock="Right"
+                                                Orientation="Horizontal">
+
+                                                <TextBlock
+                                                    VerticalAlignment="Center"
+                                                    FontSize="15"
+                                                    FontWeight="DemiBold"
+                                                    Foreground="{StaticResource Color2}"
+                                                    Style="{StaticResource IconTextBlock}"
+                                                    Text="&#xe83f;" />
+                                                <TextBlock
+                                                    Margin="1,0,0,0"
+                                                    VerticalAlignment="Center"
+                                                    FontWeight="DemiBold"
+                                                    Foreground="{StaticResource Color2}"
+                                                    Text="4.5k" />
+                                            </StackPanel>
+                                        </DockPanel>
+                                    </StackPanel>
+                                </Border>
+                            </ListBoxItem>
+                            <ListBoxItem>
+                                <Border
+                                    Width="265"
+                                    Height="180"
+                                    Margin="15,15,15,15"
+                                    Background="White">
+                                    <Border.BitmapEffect>
+                                        <DropShadowBitmapEffect
+                                            Direction="270"
+                                            Opacity="0.5"
+                                            ShadowDepth="1"
+                                            Softness="0.1" />
+                                    </Border.BitmapEffect>
+                                    <StackPanel>
+                                        <Grid>
+
+                                            <Image
+                                                Height="140"
+                                                Source="./Images/MainImage3.jpg"
+                                                Stretch="UniformToFill" />
+                                            <Border
+                                                Width="42"
+                                                Height="42"
+                                                Margin="5"
+                                                HorizontalAlignment="Right"
+                                                VerticalAlignment="Top"
+                                                Background="White"
+                                                CornerRadius="21">
+                                                <Image
+                                                    Width="40"
+                                                    Height="40"
+                                                    Source="./Images/2.jpg">
+                                                    <Image.Clip>
+                                                        <EllipseGeometry
+                                                            Center="20 20 "
+                                                            RadiusX="20"
+                                                            RadiusY="20" />
+                                                    </Image.Clip>
+                                                </Image>
+                                            </Border>
+
+                                        </Grid>
+                                        <DockPanel LastChildFill="False">
+                                            <StackPanel Margin="6">
+                                                <TextBlock
+                                                    FontWeight="DemiBold"
+                                                    Foreground="{StaticResource FontColor1}"
+                                                    Text="Cory Peterson" />
+                                                <TextBlock
+                                                    Margin="0,2,0,0"
+                                                    FontSize="8"
+                                                    Foreground="{StaticResource FontColor2}"
+                                                    Text="Texas,USA" />
+                                            </StackPanel>
+                                            <StackPanel
+                                                Margin="0,0,10,0"
+                                                DockPanel.Dock="Right"
+                                                Orientation="Horizontal">
+
+                                                <TextBlock
+                                                    VerticalAlignment="Center"
+                                                    FontSize="15"
+                                                    FontWeight="DemiBold"
+                                                    Foreground="{StaticResource Color2}"
+                                                    Style="{StaticResource IconTextBlock}"
+                                                    Text="&#xe83f;" />
+                                                <TextBlock
+                                                    Margin="1,0,0,0"
+                                                    VerticalAlignment="Center"
+                                                    FontWeight="DemiBold"
+                                                    Foreground="{StaticResource Color2}"
+                                                    Text="1.2k" />
+                                            </StackPanel>
+                                        </DockPanel>
+                                    </StackPanel>
+                                </Border>
+                            </ListBoxItem>
+                            <ListBoxItem>
+                                <Border
+                                    Width="265"
+                                    Height="180"
+                                    Margin="15,15,15,15"
+                                    Background="White">
+                                    <Border.BitmapEffect>
+                                        <DropShadowBitmapEffect
+                                            Direction="270"
+                                            Opacity="0.5"
+                                            ShadowDepth="1"
+                                            Softness="0.1" />
+                                    </Border.BitmapEffect>
+                                    <StackPanel>
+                                        <Grid>
+                                            <Image
+                                                Height="140"
+                                                Source="./Images/MainImage1.jpg"
+                                                Stretch="UniformToFill" />
+                                            <Border
+                                                Width="42"
+                                                Height="42"
+                                                Margin="5"
+                                                HorizontalAlignment="Right"
+                                                VerticalAlignment="Top"
+                                                Background="White"
+                                                CornerRadius="21">
+                                                <Image
+                                                    Width="40"
+                                                    Height="40"
+                                                    Source="./Images/2.jpg">
+                                                    <Image.Clip>
+                                                        <EllipseGeometry
+                                                            Center="20 20 "
+                                                            RadiusX="20"
+                                                            RadiusY="20" />
+                                                    </Image.Clip>
+                                                </Image>
+                                            </Border>
+                                        </Grid>
+                                        <DockPanel LastChildFill="False">
+                                            <StackPanel Margin="6">
+                                                <TextBlock
+                                                    FontWeight="DemiBold"
+                                                    Foreground="{StaticResource FontColor1}"
+                                                    Text="Cory Peterson" />
+                                                <TextBlock
+                                                    Margin="0,2,0,0"
+                                                    FontSize="8"
+                                                    Foreground="{StaticResource FontColor2}"
+                                                    Text="Texas,USA" />
+                                            </StackPanel>
+                                            <StackPanel
+                                                Margin="0,0,10,0"
+                                                DockPanel.Dock="Right"
+                                                Orientation="Horizontal">
+
+                                                <TextBlock
+                                                    VerticalAlignment="Center"
+                                                    FontSize="15"
+                                                    FontWeight="DemiBold"
+                                                    Foreground="{StaticResource Color2}"
+                                                    Style="{StaticResource IconTextBlock}"
+                                                    Text="&#xe83f;" />
+                                                <TextBlock
+                                                    Margin="1,0,0,0"
+                                                    VerticalAlignment="Center"
+                                                    FontWeight="DemiBold"
+                                                    Foreground="{StaticResource Color2}"
+                                                    Text="255" />
+                                            </StackPanel>
+                                        </DockPanel>
+                                    </StackPanel>
+                                </Border>
+                            </ListBoxItem>
+                            <ListBoxItem>
+                                <Border
+                                    Width="265"
+                                    Height="180"
+                                    Margin="15,15,15,15"
+                                    Background="White">
+                                    <Border.BitmapEffect>
+                                        <DropShadowBitmapEffect
+                                            Direction="270"
+                                            Opacity="0.5"
+                                            ShadowDepth="1"
+                                            Softness="0.1" />
+                                    </Border.BitmapEffect>
+                                    <StackPanel>
+                                        <Grid>
+                                            <Image
+                                                Height="140"
+                                                Source="./Images/MainImage2.jpg"
+                                                Stretch="UniformToFill" />
+                                            <Border
+                                                Width="42"
+                                                Height="42"
+                                                Margin="5"
+                                                HorizontalAlignment="Right"
+                                                VerticalAlignment="Top"
+                                                Background="White"
+                                                CornerRadius="21">
+                                                <Image
+                                                    Width="40"
+                                                    Height="40"
+                                                    Source="./Images/2.jpg">
+                                                    <Image.Clip>
+                                                        <EllipseGeometry
+                                                            Center="20 20 "
+                                                            RadiusX="20"
+                                                            RadiusY="20" />
+                                                    </Image.Clip>
+                                                </Image>
+                                            </Border>
+                                        </Grid>
+                                        <DockPanel LastChildFill="False">
+                                            <StackPanel Margin="6">
+                                                <TextBlock
+                                                    FontWeight="DemiBold"
+                                                    Foreground="{StaticResource FontColor1}"
+                                                    Text="Cory Peterson" />
+                                                <TextBlock
+                                                    Margin="0,2,0,0"
+                                                    FontSize="8"
+                                                    Foreground="{StaticResource FontColor2}"
+                                                    Text="Texas,USA" />
+                                            </StackPanel>
+                                            <StackPanel
+                                                Margin="0,0,10,0"
+                                                DockPanel.Dock="Right"
+                                                Orientation="Horizontal">
+
+                                                <TextBlock
+                                                    VerticalAlignment="Center"
+                                                    FontSize="15"
+                                                    FontWeight="DemiBold"
+                                                    Foreground="{StaticResource Color2}"
+                                                    Style="{StaticResource IconTextBlock}"
+                                                    Text="&#xe83f;" />
+                                                <TextBlock
+                                                    Margin="1,0,0,0"
+                                                    VerticalAlignment="Center"
+                                                    FontWeight="DemiBold"
+                                                    Foreground="{StaticResource Color2}"
+                                                    Text="4.5k" />
+                                            </StackPanel>
+                                        </DockPanel>
+                                    </StackPanel>
+                                </Border>
+                            </ListBoxItem>
+                            <ListBoxItem>
+                                <Border
+                                    Width="265"
+                                    Height="180"
+                                    Margin="15,15,15,15"
+                                    Background="White">
+                                    <Border.BitmapEffect>
+                                        <DropShadowBitmapEffect
+                                            Direction="270"
+                                            Opacity="0.5"
+                                            ShadowDepth="1"
+                                            Softness="0.1" />
+                                    </Border.BitmapEffect>
+                                    <StackPanel>
+                                        <Grid>
+
+                                            <Image
+                                                Height="140"
+                                                Source="./Images/MainImage3.jpg"
+                                                Stretch="UniformToFill" />
+                                            <Border
+                                                Width="42"
+                                                Height="42"
+                                                Margin="5"
+                                                HorizontalAlignment="Right"
+                                                VerticalAlignment="Top"
+                                                Background="White"
+                                                CornerRadius="21">
+                                                <Image
+                                                    Width="40"
+                                                    Height="40"
+                                                    Source="./Images/2.jpg">
+                                                    <Image.Clip>
+                                                        <EllipseGeometry
+                                                            Center="20 20 "
+                                                            RadiusX="20"
+                                                            RadiusY="20" />
+                                                    </Image.Clip>
+                                                </Image>
+                                            </Border>
+
+                                        </Grid>
+                                        <DockPanel LastChildFill="False">
+                                            <StackPanel Margin="6">
+                                                <TextBlock
+                                                    FontWeight="DemiBold"
+                                                    Foreground="{StaticResource FontColor1}"
+                                                    Text="Cory Peterson" />
+                                                <TextBlock
+                                                    Margin="0,2,0,0"
+                                                    FontSize="8"
+                                                    Foreground="{StaticResource FontColor2}"
+                                                    Text="Texas,USA" />
+                                            </StackPanel>
+                                            <StackPanel
+                                                Margin="0,0,10,0"
+                                                DockPanel.Dock="Right"
+                                                Orientation="Horizontal">
+
+                                                <TextBlock
+                                                    VerticalAlignment="Center"
+                                                    FontSize="15"
+                                                    FontWeight="DemiBold"
+                                                    Foreground="{StaticResource Color2}"
+                                                    Style="{StaticResource IconTextBlock}"
+                                                    Text="&#xe83f;" />
+                                                <TextBlock
+                                                    Margin="1,0,0,0"
+                                                    VerticalAlignment="Center"
+                                                    FontWeight="DemiBold"
+                                                    Foreground="{StaticResource Color2}"
+                                                    Text="1.2k" />
+                                            </StackPanel>
+                                        </DockPanel>
+                                    </StackPanel>
+                                </Border>
+                            </ListBoxItem>
+
+                        </ListBox>
+                    </Grid>
+
+                    <!--  右侧  -->
+                    <Grid Grid.Column="1" Background="White">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto" />
+                            <RowDefinition />
+                            <RowDefinition Height="auto" />
+                        </Grid.RowDefinitions>
+                        <TextBlock
+                            Margin="0,30,0,0"
+                            HorizontalAlignment="Center"
+                            FontSize="20"
+                            FontWeight="DemiBold"
+                            Foreground="{StaticResource FontColor1}"
+                            Text="Recent Tarvellers" />
+
+                        <ListBox
+                            Grid.Row="1"
+                            BorderThickness="0"
+                            ScrollViewer.HorizontalScrollBarVisibility="Hidden"
+                            ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                            <ListBox.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel />
+                                </ItemsPanelTemplate>
+                            </ListBox.ItemsPanel>
+                            <!--<ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <DockPanel LastChildFill="False" Width="200" Margin="30 0 10 0">
+                                        <Image Source="./Images/2.jpg" Height="40" Width="40" >
+                                            <Image.Clip>
+                                                <EllipseGeometry Center="20 20 " RadiusX="20" RadiusY="20"/>
+                                            </Image.Clip>
+                                        </Image>
+                                        <TextBlock Text="{Binding Name}" VerticalAlignment="Center" Margin="6 0 0 0"/>
+                                        <Border Width="10" Height="10" DockPanel.Dock="Right"
+                                            Background="{Binding Color}" CornerRadius="5" VerticalAlignment="Center"
+                                            Margin="0 0 20 0"/>
+                                    </DockPanel>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>-->
+                            <ListBoxItem Margin="30,7.5,10,7.5">
+                                <DockPanel Width="200" LastChildFill="False">
+                                    <Image
+                                        Width="40"
+                                        Height="40"
+                                        Source="./Images/2.jpg">
+                                        <Image.Clip>
+                                            <EllipseGeometry
+                                                Center="20 20 "
+                                                RadiusX="20"
+                                                RadiusY="20" />
+                                        </Image.Clip>
+                                    </Image>
+                                    <TextBlock
+                                        Margin="6,0,0,0"
+                                        VerticalAlignment="Center"
+                                        Foreground="{StaticResource FontColor1}"
+                                        Text="Jeremy Shaw" />
+                                    <Border
+                                        Width="10"
+                                        Height="10"
+                                        Margin="0,0,20,0"
+                                        VerticalAlignment="Center"
+                                        Background="{StaticResource Color2}"
+                                        CornerRadius="5"
+                                        DockPanel.Dock="Right" />
+                                </DockPanel>
+                            </ListBoxItem>
+                            <ListBoxItem Margin="30,7.5,10,7.5">
+                                <DockPanel Width="200" LastChildFill="False">
+                                    <Image
+                                        Width="40"
+                                        Height="40"
+                                        Source="./Images/2.jpg">
+                                        <Image.Clip>
+                                            <EllipseGeometry
+                                                Center="20 20 "
+                                                RadiusX="20"
+                                                RadiusY="20" />
+                                        </Image.Clip>
+                                    </Image>
+                                    <TextBlock
+                                        Margin="6,0,0,0"
+                                        VerticalAlignment="Center"
+                                        Foreground="{StaticResource FontColor1}"
+                                        Text="Kimberly Wales" />
+                                    <Border
+                                        Width="10"
+                                        Height="10"
+                                        Margin="0,0,20,0"
+                                        VerticalAlignment="Center"
+                                        Background="{StaticResource Color2}"
+                                        CornerRadius="5"
+                                        DockPanel.Dock="Right" />
+                                </DockPanel>
+                            </ListBoxItem>
+                            <ListBoxItem Margin="30,7.5,10,7.5">
+                                <DockPanel Width="200" LastChildFill="False">
+                                    <Image
+                                        Width="40"
+                                        Height="40"
+                                        Source="./Images/2.jpg">
+                                        <Image.Clip>
+                                            <EllipseGeometry
+                                                Center="20 20 "
+                                                RadiusX="20"
+                                                RadiusY="20" />
+                                        </Image.Clip>
+                                    </Image>
+                                    <TextBlock
+                                        Margin="6,0,0,0"
+                                        VerticalAlignment="Center"
+                                        Foreground="{StaticResource FontColor1}"
+                                        Text="Karan Sharma" />
+                                    <Border
+                                        Width="10"
+                                        Height="10"
+                                        Margin="0,0,20,0"
+                                        VerticalAlignment="Center"
+                                        Background="{StaticResource Color2}"
+                                        CornerRadius="5"
+                                        DockPanel.Dock="Right" />
+                                </DockPanel>
+                            </ListBoxItem>
+                            <ListBoxItem Margin="30,7.5,10,7.5">
+                                <DockPanel Width="200" LastChildFill="False">
+                                    <Image
+                                        Width="40"
+                                        Height="40"
+                                        Source="./Images/2.jpg">
+                                        <Image.Clip>
+                                            <EllipseGeometry
+                                                Center="20 20 "
+                                                RadiusX="20"
+                                                RadiusY="20" />
+                                        </Image.Clip>
+                                    </Image>
+                                    <TextBlock
+                                        Margin="6,0,0,0"
+                                        VerticalAlignment="Center"
+                                        Foreground="{StaticResource FontColor1}"
+                                        Text="Chi Chow" />
+                                    <Border
+                                        Width="10"
+                                        Height="10"
+                                        Margin="0,0,20,0"
+                                        VerticalAlignment="Center"
+                                        Background="{StaticResource Color2}"
+                                        CornerRadius="5"
+                                        DockPanel.Dock="Right" />
+                                </DockPanel>
+                            </ListBoxItem>
+                            <ListBoxItem Margin="30,7.5,10,7.5">
+                                <DockPanel Width="200" LastChildFill="False">
+                                    <Image
+                                        Width="40"
+                                        Height="40"
+                                        Source="./Images/2.jpg">
+                                        <Image.Clip>
+                                            <EllipseGeometry
+                                                Center="20 20 "
+                                                RadiusX="20"
+                                                RadiusY="20" />
+                                        </Image.Clip>
+                                    </Image>
+                                    <TextBlock
+                                        Margin="6,0,0,0"
+                                        VerticalAlignment="Center"
+                                        Foreground="{StaticResource FontColor1}"
+                                        Text="Peter John" />
+                                    <Border
+                                        Width="10"
+                                        Height="10"
+                                        Margin="0,0,20,0"
+                                        VerticalAlignment="Center"
+                                        Background="{StaticResource Color2}"
+                                        CornerRadius="5"
+                                        DockPanel.Dock="Right" />
+                                </DockPanel>
+                            </ListBoxItem>
+                        </ListBox>
+
+                        <TextBox
+                            Grid.Row="2"
+                            Height="40"
+                            Margin="30,10,30,40"
+                            Style="{StaticResource SearchTextBox}" />
+                    </Grid>
+                </Grid>
+            </Grid>
+        </Grid>
+    </Grid>
+</Window>

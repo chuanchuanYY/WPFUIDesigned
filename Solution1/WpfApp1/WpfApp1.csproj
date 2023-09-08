@@ -1,0 +1,44 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Fonts\iconfont.ttf" />
+    <None Remove="Images\1.jpg" />
+    <None Remove="Images\2.jpg" />
+    <None Remove="Images\icon.png" />
+    <None Remove="Images\MainImage1.jpg" />
+    <None Remove="Images\MainImage2.jpg" />
+    <None Remove="Images\MainImage3.jpg" />
+    <None Remove="Images\MainImage4.jpg" />
+    <None Remove="Images\MainImage5.jpg" />
+    <None Remove="Images\MainImage6.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.39" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Fonts\iconfont.ttf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\1.jpg" />
+    <Resource Include="Images\2.jpg" />
+    <Resource Include="Images\icon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\MainImage1.jpg" />
+    <Resource Include="Images\MainImage2.jpg" />
+    <Resource Include="Images\MainImage3.jpg" />
+    <Resource Include="Images\MainImage4.jpg" />
+    <Resource Include="Images\MainImage5.jpg" />
+    <Resource Include="Images\MainImage6.jpg" />
+  </ItemGroup>
+
+</Project>

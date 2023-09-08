@@ -1,0 +1,25 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style x:Key="IconButton" TargetType="RadioButton">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Border
+                        Width="{TemplateBinding Width}"
+                        Height="{TemplateBinding Height}"
+                        Padding="{Binding RelativeSource={RelativeSource AncestorType=RadioButton}, Path=Padding}">
+                        <TextBlock
+                            x:Name="icon"
+                            Foreground="{StaticResource FontColor2}"
+                            Style="{StaticResource IconTextBlock}"
+                            Text="{Binding RelativeSource={RelativeSource AncestorType=RadioButton}, Path=Content}" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="RadioButton.IsChecked" Value="True">
+                            <Setter TargetName="icon" Property="Foreground" Value="{StaticResource Color2}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
